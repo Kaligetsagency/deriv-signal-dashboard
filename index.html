@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deriv Trading Signal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="toast" class="toast hidden">Reconnecting to Deriv API...</div>
+    
+    <div class="dashboard-container">
+        <header>
+            <h1>Deriv Signal Analysis</h1>
+            <p>Momentum Micro-Breakout Strategy</p>
+        </header>
+
+        <main>
+            <div class="control-panel">
+                <label for="assetSelect">Select Asset:</label>
+                <select id="assetSelect" class="searchable-dropdown">
+                    <option value="R_100" selected>Volatility 100 Index</option>
+                </select>
+
+                <button id="analyzeBtn" class="action-btn">Analyze</button>
+            </div>
+
+            <div id="signalDashboard" class="signal-card hidden">
+                <h2 id="signalDirection"></h2>
+                
+                <div class="data-grid hidden" id="dataGrid">
+                    <div class="data-item">
+                        <span>Entry Price</span>
+                        <strong id="entryPrice">0.00</strong>
+                    </div>
+                    <div class="data-item">
+                        <span>Take Profit (TP)</span>
+                        <strong id="takeProfit">0.00</strong>
+                    </div>
+                    <div class="data-item">
+                        <span>Stop Loss (SL)</span>
+                        <strong id="stopLoss">0.00</strong>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
